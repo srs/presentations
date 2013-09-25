@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>ElasticSearch Integration</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/mytheme.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <div class="slides">
+
+        <section>
+			<h1>ElasticSearch Integration</h1>
+			<h3>in Enonic CMS</h3>
+			
+			<br>
+			Sten Roger Sandvik / <em>srs@enonic.com</em>
+        </section>
+
+		<section>
+			<h2>Warning!</h2>
+			Massive <em>Java</em> usage ahead
+		</section>
+
+		<section>
+			<h2>Enonic <em>CMS</em></h2>
+		</section>
+
+        <section>
+			<img src="images/overview.png"/>
+        </section>
+		
+        <section>
+			<h2>Custom <em>query</em> language</h2>
+        </section>
+
+        <section>
+			<img src="images/query.png"/>
+        </section>
+
+        <section>
+			<img src="images/query_detail.png"/>
+        </section>
+
+        <section>
+			<img src="images/query_json.png"/>
+        </section>
+		
+        <section>
+			<h2><em>Starting</em> &amp; stopping</h2>
+        </section>
+
+        <section>
+			<img src="images/lifecycle_start.png"/>
+        </section>
+
+        <section>
+			<img src="images/lifecycle_stop.png"/>
+        </section>
+
+        <section>
+			<img src="images/lifecycle_wait.png"/>
+        </section>	
+
+        <section>
+			<h2>Custom <em>transport</em> requests</h2>
+        </section>
+		
+        <section>
+			<img src="images/cache.png"/>
+        </section>
+
+        <section>
+			<img src="images/cache_2.png"/>
+        </section>
+
+        <section>
+			<h2>Cache <em>event</em> &amp; listener</h2>
+        </section>
+
+        <section>
+			<img src="images/cache_event.png"/>
+        </section>
+
+        <section>
+			<img src="images/cache_listener.png"/>
+        </section>
+
+        <section>
+			<h2>Custom <em>request object</em></h2>
+        </section>
+
+        <section>
+			<img src="images/cache_request_1.png"/>
+        </section>
+
+        <section>
+			<img src="images/cache_request_2.png"/>
+        </section>
+
+        <section>
+			<h2>Custom <em>request handler</em></h2>
+        </section>
+
+        <section>
+			<img src="images/cache_handler_1.png"/>
+        </section>
+
+        <section>
+			<h2><em>Wire</em> it together</h2>
+        </section>
+
+        <section>
+			<img src="images/cache_sender_1.png"/>
+        </section>
+
+        <section>
+			<img src="images/cache_sender_2.png"/>
+        </section>
+
+        <section>
+			<img src="images/cache_sender_3.png"/>
+        </section>
+
+        <section>
+			<img src="images/cache_sender_4.png"/>
+        </section>
+
+        <section>
+			<img src="images/cache_sender_5.png"/>
+        </section>
+
+        <section>
+			<h2>Why <em>not</em> plugins?</h2>
+			Custom Lifecycle, Spring IoC, Guice package name
+        </section>
+		
+        <section>
+			<h1>Thanks!</h1>
+			<br/>
+			srs@enonic.com<br/>
+			<a href="http://github.com/enonic">http://github.com/enonic</a><br/>
+        </section>
+    </div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+    Reveal.initialize({
+
+        controls: false,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            } },
+            { src: 'plugin/markdown/showdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            } },
+            { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } },
+            { src: 'plugin/notes/notes.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } }
+            // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+            // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+    });
+
+</script>
+
+</body>
+</html>

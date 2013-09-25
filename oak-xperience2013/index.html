@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>OAK</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/mytheme.css" id="theme">
+
+    <!-- For syntax highlighting -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+        <section>
+			<h1>OAK</h1>
+            <h3>En neste generasjons database</h3>
+
+            Sten Roger Sandvik / <em>srs@enonic.com</em>
+        </section>
+		
+		<!-- Intro -->
+		
+        <section>
+            <h1>2001</h1>
+
+            Vertical Site 1.0, <em>relasjonsdatabase</em>
+        </section>
+
+        <section>
+            <h1>2012</h1>
+
+            Enonic CMS 4.7, <em>relasjonsdatabase</em>, ElasticSearch
+        </section>
+
+        <section>
+            <blockquote>
+                Alle som har forsøkt å oversette og lagre applikasjonsdomener i en relasjonsdatabase har på ett
+                eller annet tidspunkt under prosessen vært på gråten.
+            </blockquote>
+            <em class="bqfooter">Runar Myklebust</em>
+        </section>
+
+        <section>
+			<h2>Problem <em>1</em></h2>	
+			
+			Effektive hierarkiske operasjoner<br/>(oppslag, kopier, flytt, slett)
+        </section>
+
+        <section>
+			<h2>Problem <em>2</em></h2>	
+			
+			Strukturert og ustrukturert innhold i samme database
+        </section>
+        
+        <section>
+			<h2>Problem <em>3</em></h2>	
+			
+			Hastighet (les, skriv, søk og binærer)
+        </section>
+        
+        <section>
+			<h2>noSQL i 5.0</h2>	
+			
+			Apache Jackrabbit <em>OAK</em> og ElasticSearch
+        </section>
+		
+        <!-- OAK intro -->
+        
+        <section>
+            <h2>Hva er <em>OAK</em>?</h2>
+		
+            <ul>
+                <li>Apache Jackrabbit OAK</li>
+                <li>En JCR implementasjon (via utvidelser)</li>
+                <li>Lettvekts database for hierarkisk lagring</li>
+                <li>Enkel lettvekts datamodell</li>
+                <li>Effektiv lagring som GIT (immutable)</li>
+                <li>Støtter lange transaksjoner</li>
+                <li>Mange samtidige oppdateringer (MVCC)</li>
+                <li>Pluggbar validering, lagring og søk</li>
+            </ul>
+        </section>
+		
+        <section>
+            <img src="images/oak_arch_simple.png"/>
+        </section>
+
+        <section>
+            <section>
+                <h2>Bruk av <em>OAK</em> API</h2>
+            </section>
+
+            <section>
+                <h2>Familien Simpson</h2>
+                <img src="images/oak_simpsons.png"/>
+            </section>
+            
+            <section>
+                <h2>Lag ett repo</h2>
+                <img src="images/oak_create_repo.png"/>
+            </section>
+
+            <section>
+                <h2>Opprett en node</h2>
+                <img src="images/oak_create_node.png"/>
+            </section>
+    
+            <section>
+                <h2>Og subnoder</h2>
+                <img src="images/oak_create_subnodes.png"/>
+            </section>
+
+            <section>
+                <h2>Knytt referanser</h2>
+                <img src="images/oak_add_relations.png"/>
+            </section>
+
+            <section>
+                <h2>Finn tilbake</h2>
+                <img src="images/oak_find_properties.png"/>
+            </section>
+        </section>        
+
+        <section>
+            <h2>OAK utvidelser</h2>
+            <img src="images/oak_plugins.png"/>
+        </section>
+        
+        <section>
+            <h2>Validere datatype</h2>
+            <img src="images/oak_validator_code.png"/>
+        </section>
+        
+        <section>
+            <h2>Registrere validator</h2>
+            <img src="images/oak_plugin_register.png"/>
+        </section>
+        
+        <!-- JCR Intro -->
+        
+        <section>
+            <h2>Hva er JCR?</h2>
+            
+            <ul>
+                <li>Java Content Repository</li>
+                <li>Java API for hierarkisk lagring</li>
+                <li>JSR-170, JSR-286 og JSR-333 (1.0, 2.0 og 2.1)</li>
+                <li>Enkel datamodell (Noder og properties)</li>
+                <li>Strukrurert og ustrukturert</li>
+                <li>Flere implementasjoner (Apache, JBoss)</li>
+            </ul>
+        </section>
+        
+        <section>
+            <h2>JCR som utvidelser</h2>
+                <img src="images/jcr_oak_plugins.png"/>
+        </section>        
+        
+		<section>
+			<section>
+                <h2>Bruk av <em>JCR</em> API</h2>
+            </section>
+	
+            <section>
+                <h2>Familien Simpson</h2>
+                <img src="images/jcr_simpsons.png"/>
+            </section>
+            
+            <section>
+                <h2>Lag ett repo</h2>
+                <img src="images/jcr_create_repo.png"/>
+            </section>
+            
+            <section>
+                <h2>Opprett en node</h2>
+    
+                <img src="images/jcr_create_node.png"/>
+            </section>
+
+            <section>
+                <h2>Og subnoder</h2>
+    
+                <img src="images/jcr_create_subnodes.png"/>
+            </section>
+
+            <section>
+                <h3>Knytt relasjoner</h3>
+    
+                <img src="images/jcr_add_relations.png"/>
+            </section>
+		
+            <section>
+                <h2>Finn tilbake</h2>
+    
+                <img src="images/jcr_find_properties.png"/>
+            </section>		
+
+            <section>
+                <h2>Innsiden av JCR</h2>
+                <img src="images/jcr_oak_plugins_code.png"/>
+            </section>
+
+        </section>
+        
+	
+	<!-- OAK MicroKernel -->
+	
+	<section>
+		<h2><em>OAK</em> MikroKernel</h2>
+        
+        <ul>
+            <li>Lagringskoden i OAK (laveste lag)</li>
+            <li>Forstår hierarkiske strukturen</li>
+            <li>JSON basert</li>
+            <li>Tilstandsløs (skalerbar)</li>
+            <li>Utbyttbar (Standard, MongoDB, osv.)</li>
+            <li>All data er serialiserbar</li>
+            <li>Designet for noSQL lagring</li>
+        </ul>
+	</section>
+        
+	<section>
+        <img src="images/oak_mk_arch.png"/>
+	</section>
+		
+    <!-- 5.0 i dag og i morgen -->
+        
+	<section>
+        <h2><em>5.0</em> i dag</h2>
+        <img src="images/arch_today.png"/>
+	</section>        
+
+	<section>
+        <h2><em>5.0</em> i morgen?</h2>
+        <img src="images/arch_tomorrow.png"/>
+	</section>        
+        
+    <section>
+		<h1>Q &amp; A</h1>
+        
+        <br/>
+        Apache Jackrabbit OAK
+        <br/>
+        http://jackrabbit.apache.org
+        <br/>
+        <br/>
+        <em>srs@enonic.com</em>
+        
+	</section>
+
+    </div>
+
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+
+    Reveal.initialize({
+
+        controls: false,
+        progress: true,
+        history: true,
+        center: true,
+
+        theme: Reveal.getQueryHash().theme, // available themes are in /css/theme
+        transition: Reveal.getQueryHash().transition || 'linear', // default/cube/page/concave/zoom/linear/fade/none
+
+        // Optional libraries used to extend on reveal.js
+        dependencies: [
+            { src: 'lib/js/classList.js', condition: function () {
+                return !document.body.classList;
+            } },
+            { src: 'plugin/markdown/showdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/markdown/markdown.js', condition: function () {
+                return !!document.querySelector('[data-markdown]');
+            } },
+            { src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                hljs.initHighlightingOnLoad();
+            } },
+            { src: 'plugin/zoom-js/zoom.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } },
+            { src: 'plugin/notes/notes.js', async: true, condition: function () {
+                return !!document.body.classList;
+            } }
+            // { src: 'plugin/search/search.js', async: true, condition: function() { return !!document.body.classList; } }
+            // { src: 'plugin/remotes/remotes.js', async: true, condition: function() { return !!document.body.classList; } }
+        ]
+    });
+
+</script>
+
+</body>
+</html>
